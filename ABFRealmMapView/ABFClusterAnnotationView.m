@@ -13,6 +13,7 @@
 
 static CGFloat const ABFScaleFactorAlpha = 0.3;
 static CGFloat const ABFScaleFactorBeta = 0.4;
+static CGFloat const ABFRoundSize = 70.0;
 
 #pragma mark - Private Functions
 
@@ -107,8 +108,8 @@ static CGFloat ABFScaledValueForValue(CGFloat value)
     
     CGRect newBounds = CGRectMake(0,
                                   0,
-                                  roundf(44. * ABFScaledValueForValue(count)),
-                                  roundf(44. * ABFScaledValueForValue(count)));
+                                  roundf(ABFRoundSize * ABFScaledValueForValue(count)),
+                                  roundf(ABFRoundSize * ABFScaledValueForValue(count)));
     
     self.frame = ABFCenterRect(newBounds, self.center);
     
